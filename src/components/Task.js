@@ -8,7 +8,7 @@ import {
 import { TrashIcon, PencilIcon } from "@heroicons/react/solid";
 
 import { ToggleMenu, ToggleMenuButton } from "./ToggleMenu";
-import { dueDate } from "../helpers/dueDate";
+import { dueDate } from "../assistant/dueDate";
 
 function Task(props) {
   const taskTextRef = React.useRef();
@@ -121,7 +121,7 @@ function Task(props) {
           />
 
           {taskDate ? (
-            <div className="bg-red-500 bg-opacity-10 dark:bg-red-500 dark:bg-opacity-20 rounded-full flex flex-row text-sm text-red-500 -mt-0.5 -mb-0.5">
+            <div className="bg-red-600 bg-opacity-10 dark:bg-red-600 dark:bg-opacity-20 rounded-full flex flex-row text-sm text-red-600 -mt-0.5 -mb-0.5">
               <input
                 type="date"
                 className="bg-transparent pl-3"

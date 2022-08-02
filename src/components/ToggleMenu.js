@@ -13,7 +13,7 @@ function ToggleMenu(props) {
         onClick={toggleMenuHandler}
         className={
           isMenuToggled
-            ? "w-screen h-screen absolute right-0 top-0 bg-transparent backdrop-filter backdrop-brightness-75 z-20"
+            ? "w-screen h-screen absolute right-0 top-0 bg-transparent backdrop-filter backdrop-brightness-80 z-20"
             : "invisible"
         }
       />

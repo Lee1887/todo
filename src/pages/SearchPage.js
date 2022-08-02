@@ -21,7 +21,7 @@ function SearchPage(props) {
         </h1>
       </div>
       <div className="flex flex-col my-4">
-        {totalTasksCount === 0 && <div>No tasks founds.</div>}
+        {totalTasksCount === 0 && <div>No tasks founds!</div>}
 
         {tasks.map((task) => (
           <Task

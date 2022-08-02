@@ -4,7 +4,7 @@ import {
   isThisWeek,
   isNextWeek,
   dueDateCompare,
-} from "../helpers/dueDate";
+} from "../assistant/dueDate";
 import Task from "../components/Task";
 
 function OverviewPage(props) {
@@ -35,12 +35,12 @@ function OverviewPage(props) {
         </div>
 
         <h1 className="text-3xl border-b-4 border-transparent font-medium flex-grow ">
-          Overview
+          Your Overview
         </h1>
       </div>
       <div className="flex flex-col my-4">
         {totalTasksCount === 0 && (
-          <div>You have no tasks scheduled for the upcoming two weeks.</div>
+          <div>There are no tasks in the next time!</div>
         )}
 
         {todayTasks.length > 0 && (

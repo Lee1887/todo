@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { SunIcon, MoonIcon } from "@heroicons/react/outline";
 
-import Wrapper from "./layouts/Wrapper";
-import SideNavigation from "./layouts/SideNavigation";
-import MainContent from "./layouts/MainContent";
+import Wrapper from "./design/Wrapper";
+import SideNavigation from "./design/SideNavigation";
+import MainContent from "./design/MainContent";
 
 import Search from "./components/Search";
 import Lists from "./components/Lists";
@@ -13,35 +13,32 @@ import ListPage from "./pages/ListPage";
 import OverviewPage from "./pages/OverviewPage";
 import SearchPage from "./pages/SearchPage";
 
-import useDarkMode from "./helpers/useDarkMode";
+import useDarkMode from "./assistant/useDarkMode";
 
-// Get lists and tasks from localStorage
 let localData = {
   lists: [],
   tasks: [],
   theme: "light",
 };
-// If the JSON string isn't valid, we skip
+
 try {
   const localLists = JSON.parse(localStorage.getItem("lists"));
   const localTasks = JSON.parse(localStorage.getItem("tasks"));
   const localTheme = localStorage.getItem("theme");
-  // Check that vars aren't null
+
   if (Array.isArray(localLists) && Array.isArray(localTasks)) {
     localData.lists = localLists;
     localData.tasks = localTasks;
   }
   if (localTheme) localData.theme = localTheme;
-} catch {
-  // If JSON string is invalid do nothing
-}
+} catch {}
 
 function App() {
-  // Get lists and tasks from localStorage
+  // lists/tasks from localStorage
   const [lists, setListsState] = React.useState(localData.lists);
   const [tasks, setTasksState] = React.useState(localData.tasks);
 
-  // use DarkMode
+  // DarkMode
   const [theme, setTheme] = useDarkMode(localData.theme);
 
   function saveData(lists_, tasks_) {
