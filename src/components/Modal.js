@@ -26,7 +26,7 @@ function ModalButton(props) {
       onClick={props.onClick}
       className={
         props.isPrimary
-          ? "px-5 py-1 m-1 font-medium bg-red-500 text-white rounded-lg hover:bg-red-400"
+          ? "px-5 py-1 m-1 font-medium bg-red-600 text-white rounded-lg hover:bg-red-400"
           : "px-5 py-1 m-1 font-medium rounded-lg hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-20"
       }
     >

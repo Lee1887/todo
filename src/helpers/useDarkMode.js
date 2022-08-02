@@ -8,7 +8,6 @@ function useDarkMode(prop) {
     root.classList.remove(notTheme);
     root.classList.add(theme);
 
-    // Save settings in localStorage
     localStorage.setItem("theme", theme);
   }, [theme]);
   return [theme, setTheme];

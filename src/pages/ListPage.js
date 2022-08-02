@@ -100,11 +100,11 @@ function ListPage(props) {
             <div className="flex flex-col text-sm">
               <ToggleMenuButton onClick={editButtonHandler}>
                 <PencilIcon className="h-5 w-5 mr-2" />
-                Edit
+                Edit your List
               </ToggleMenuButton>
               <ToggleMenuButton onClick={toggleModalHandler}>
                 <TrashIcon className="h-5 w-5 mr-2" />
-                Delete
+                Delete your List
               </ToggleMenuButton>
             </div>
           </ToggleMenu>
@@ -118,9 +118,9 @@ function ListPage(props) {
           again.
         </ModalText>
         <div className="flex flex-row justify-end">
-          <ModalButton onClick={toggleModalHandler}>Cancel</ModalButton>
+          <ModalButton onClick={toggleModalHandler}>Cancel it!</ModalButton>
           <ModalButton onClick={removeHandler} isPrimary="true">
-            Delete
+            Delete it!
           </ModalButton>
         </div>
       </Modal>

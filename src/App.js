@@ -15,33 +15,30 @@ import SearchPage from "./pages/SearchPage";
 
 import useDarkMode from "./helpers/useDarkMode";
 
-// Get lists and tasks from localStorage
 let localData = {
   lists: [],
   tasks: [],
   theme: "light",
 };
-// If the JSON string isn't valid, we skip
+
 try {
   const localLists = JSON.parse(localStorage.getItem("lists"));
   const localTasks = JSON.parse(localStorage.getItem("tasks"));
   const localTheme = localStorage.getItem("theme");
-  // Check that vars aren't null
+
   if (Array.isArray(localLists) && Array.isArray(localTasks)) {
     localData.lists = localLists;
     localData.tasks = localTasks;
   }
   if (localTheme) localData.theme = localTheme;
-} catch {
-  // If JSON string is invalid do nothing
-}
+} catch {}
 
 function App() {
-  // Get lists and tasks from localStorage
+  // lists/tasks from localStorage
   const [lists, setListsState] = React.useState(localData.lists);
   const [tasks, setTasksState] = React.useState(localData.tasks);
 
-  // use DarkMode
+  // DarkMode
   const [theme, setTheme] = useDarkMode(localData.theme);
 
   function saveData(lists_, tasks_) {
