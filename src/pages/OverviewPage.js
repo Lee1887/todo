@@ -4,7 +4,7 @@ import {
   isThisWeek,
   isNextWeek,
   dueDateCompare,
-} from "../helpers/dueDate";
+} from "../assistant/dueDate";
 import Task from "../components/Task";
 
 function OverviewPage(props) {

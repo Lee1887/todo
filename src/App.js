@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { SunIcon, MoonIcon } from "@heroicons/react/outline";
 
-import Wrapper from "./layouts/Wrapper";
-import SideNavigation from "./layouts/SideNavigation";
-import MainContent from "./layouts/MainContent";
+import Wrapper from "./design/Wrapper";
+import SideNavigation from "./design/SideNavigation";
+import MainContent from "./design/MainContent";
 
 import Search from "./components/Search";
 import Lists from "./components/Lists";
@@ -13,7 +13,7 @@ import ListPage from "./pages/ListPage";
 import OverviewPage from "./pages/OverviewPage";
 import SearchPage from "./pages/SearchPage";
 
-import useDarkMode from "./helpers/useDarkMode";
+import useDarkMode from "./assistant/useDarkMode";
 
 let localData = {
   lists: [],

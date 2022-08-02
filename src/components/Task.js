@@ -8,7 +8,7 @@ import {
 import { TrashIcon, PencilIcon } from "@heroicons/react/solid";
 
 import { ToggleMenu, ToggleMenuButton } from "./ToggleMenu";
-import { dueDate } from "../helpers/dueDate";
+import { dueDate } from "../assistant/dueDate";
 
 function Task(props) {
   const taskTextRef = React.useRef();
